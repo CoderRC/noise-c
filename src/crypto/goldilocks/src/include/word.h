@@ -275,15 +275,7 @@ malloc_vector (
 
 void *
 malloc_vector(size_t size) {
-    void *out = NULL;
-    
-    int ret = posix_memalign(&out, sizeof(big_register_t), size);
-    
-    if (ret) {
-        return NULL;
-    } else {
-        return out;
-    }
+    return malloc(size);
 }
 
 #endif /* __WORD_H__ */
